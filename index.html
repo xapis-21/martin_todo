@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Martin Todo</title>
+  </head>
+  <body class="bg-slate-200 dark:bg-slate-900 px-8 pt-20">
+    <!-- Bg Image -->
+    <div
+      class="w-full absolute top-0 left-0 h-screen max-h-[260px] bg-cover -z-50 bg-[url(/images/bg-mobile-light.jpeg)] dark:bg-[url(/images/bg-mobile-dark.jpeg)]"
+    ></div>
+
+    <!-- create the header -->
+
+    <header class="flex justify-between py-8">
+      <h1 class="text-white text-4xl tracking-[4px] font-bold">TODO</h1>
+      <button
+        id="theme-btn"
+        class="bg-[url(/images/icon-moon.svg)] dark:bg-[url(/images/icon-sun.svg)] bg-no-repeat bg-center bg-contain text-slate-200 dark:text-slate-900"
+      >
+        <span class="opacity-0"> theme button </span>
+      </button>
+    </header>
+
+    <!-- create the input field -->
+    <div
+      class="w-full bg-slate-200 dark:bg-slate-800 flex gap-4 items-center px-4 py-4 rounded-md custom-shadow"
+    >
+      <form id="todo-input">
+        <input
+          type="text"
+          class="bg-transparent text-lg border-none outline-none w-full text-slate-600 dark:text-slate-200"
+          placeholder="Create a new todo..."
+        />
+      </form>
+    </div>
+
+    <div class="mt-8">
+      
+      <!-- Todos container -->
+      <ul id="todos" class=" flex flex-col pb-10 [&>*:first-child]:rounded-t-md  [&>*:last-child]:rounded-b-md [&>*:last-child]:border-none">
+         <li class="flex justify-between w-full gap-4 items-center p-4 shadow-2xl text-base text-slate-600 dark:text-slate-400 custom-shadow bg-slate-200 dark:bg-slate-800 dark:border-slate-400 border-slate-400 ">
+
+          <div class="">
+            <div class=""></div>
+            <p class="">Complete online JavaScript course</p>
+          </div>
+          <button class="">X</button>
+
+          
+        </li> 
+      
+        
+      </ul>
+
+      <!-- footer -->
+      <div
+        class="flex justify-between w-full gap-4 items-center p-4 shadow-2xl text-xs text-slate-600 dark:text-slate-400 custom-shadow bg-slate-200 dark:bg-slate-800 rounded-md"
+      >
+        <div class="">
+          <span id="counter">0</span> items left
+        </div>
+        <div class="flex items-center gap-4">
+          <button class="active">All</button>
+          <button>Active</button>
+          <button>Completed</button>
+        </div>
+        <button class="">Clear Completed</button>
+      </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

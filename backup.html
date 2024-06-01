@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Martin Todo</title>
+  </head>
+  <body class="bg-slate-200 dark:bg-slate-900">
+    <div>
+      <img
+        id="bg-image"
+        src="/images/bg-mobile-dark.jpeg"
+        alt=""
+        class="w-full absolute top-0 left-0 h-screen max-h-[300px] object-cover -z-50"
+      />
+
+      <section class="w-full h-fit flex flex-col pt-20 max-w-[800px] mx-auto">
+        <div class="flex justify-between">
+          <h1 class="text-white font-bold text-5xl tracking-[14px]">TODO</h1>
+          <img
+            id="theme-btn"
+            src="/images/icon-sun.svg"
+            alt=""
+            class="w-10 h-10 cursor-pointer"
+          />
+        </div>
+
+        <div class="mt-20 flex flex-col gap-12">
+          <div
+            class="input-container bg-slate-200 dark:bg-slate-800 flex gap-4 w-full items-center px-4 py-4 rounded-md custom-shadow"
+          >
+            <div class="h-6 w-6 rounded-full border-slate-500 border-2"></div>
+            <form id="todo-input">
+              <input
+                type="text"
+                class="w-full bg-transparent text-xl py-2 border-none outline-none text-slate-600 dark:text-slate-200"
+              />
+            </form>
+          </div>
+
+          <div>
+            <ul id="todos"></ul>
+
+            <div
+              class="bg-slate-800 flex justify-between w-full gap-4 items-center px-4 py-4 shadow-2xl text-xl py-2 px-4 outline-none text-slate-200 custom-shadow border-b-[.5px] border-slate-600"
+            >
+              <div class="flex gap-4 text-sm text-slate-600">
+                <span id="counter" class="i">0</span>
+                items left
+              </div>
+              <div class="text-sm text-slate-600 flex gap-8 status">
+                <button class="active">All</button><button>Active</button
+                ><button>Completed</button>
+              </div>
+              <button class="text-sm text-slate-600">Clear Completed</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- <script src="/script.js"></script> -->
+  </body>
+</html>
